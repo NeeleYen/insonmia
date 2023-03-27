@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:websocket="http://www.springframework.org/schema/websocket"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/websocket 
+        https://www.springframework.org/schema/websocket/spring-websocket.xsd"> 
+
+ 	
+ 	<websocket:handlers>
+        <websocket:mapping path="/instant-chat" handler="WebSocketHandler"/>
+        <websocket:handshake-interceptors>
+            <bean class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor"/>
+			<!-- Spring WebSocket內建的HttpSessionHandshakeInterceptor類別可將Http session的屬性附加到WebSocket session的屬性集合裡。 -->
+        </websocket:handshake-interceptors>
+    </websocket:handlers>
+    <bean id="WebSocketHandler" class="com.test.Insomnia.websocket.WebSocketHandler"/>
+  	
+</beans>
+

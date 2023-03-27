@@ -1,0 +1,384 @@
+/* 版面設定 */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 第一區header */
+
+/* 會員照片 */
+.landscape {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.landscape>img {
+    width: 200%;
+    position: absolute;
+    left: -50%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 22px;
+
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    text-align: right;
+    margin-top: -90px;
+}
+
+nav ul {
+    list-style: none;
+
+}
+
+/* 會員照片 */
+#preview {
+    max-width: 50px;
+    max-height: 50px;
+    display: none;
+    float: right;
+}
+
+/* 會員照片 */
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.option ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 第二區 */
+/* 輪播圖 */
+.container {
+    margin-top: 25px;
+}
+
+.slidepic {
+    margin-top: 70px;
+
+}
+
+#slide {
+    position: relative;
+    max-width: 650px;
+    max-height: 450px;
+}
+
+#slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
+}
+
+#slide img:first-child {
+    position: static;
+}
+
+#slide img.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#slide .prev,
+#slide .next {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgba(0, 0, 0, 0.12);
+    padding: 30px 10px;
+}
+
+#slide .prev:hover,
+#slide .next:hover {
+    background-color: rgba(0, 0, 0, 0.24);
+}
+
+#slide .prev:after,
+#slide .next:after {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+#slide .prev {
+    left: 0;
+}
+
+#slide .prev:after {
+    transform: rotate(-135deg);
+    margin-left: 4px;
+}
+
+#slide .next {
+    right: 0;
+}
+
+#slide .next:after {
+    transform: rotate(45deg);
+    margin-right: 4px;
+}
+
+/* 網站介紹 */
+
+.webintro {
+    margin-top: 65px;
+    padding-left: 30px;
+
+}
+
+.webintro h1 {
+    font-weight: 70px;
+}
+
+.webintro p {
+    max-width: 450px;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+/* 發起專案按鈕 */
+.postbutton {
+    border: 0;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 30px;
+    width: 450px;
+    height: 40px;
+
+}
+
+/* 第三區種類大圖 */
+.box-container {
+    background-color: #acacac72;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.pic {
+    /* width: 400px;
+    height: 200px; */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 40px;
+    overflow: hidden;
+    /* 設定父別 */
+    position: relative;
+    float: left;
+}
+
+.pic img {
+    transform: scale(1, 1);
+    transition: all 1s ease-out;
+}
+
+.pic img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.box-container .info {
+    /*   display: none; */
+    opacity: 0;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .3);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 40px;
+    -webkit-transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info p {
+    color: #fff;
+    font-size: 40px;
+
+}
+
+.info:hover {
+    /* -webkit-transition: 500ms; */
+    margin-top: 0;
+    opacity: 1;
+}
+
+/* 精選專案 */
+/* .last-container {
+    margin-top: 100px;
+    padding-left: 100px;
+    display: flex;
+    text-align: left;
+}
+
+.last-container li {
+    margin-top: 20px;
+    list-style: none;
+    float: left;
+} */
+
+/* 精選專案欄位 */
+/* ul.slides {
+    position: relative;
+    width: 600px;
+    height: 280px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+li.slide {
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 120px;
+    color: #fff;
+    transition: .5s transform ease-in-out;
+}
+
+.slide:nth-of-type(1) {
+    background-color: #F2E205;
+}
+
+.slide:nth-of-type(2) {
+    background-color: #F25C05;
+    left: 100%;
+}
+
+.slide:nth-of-type(3) {
+    background-color: #495F8C;
+    left: 200%;
+}
+
+input[type="radio"] {
+    position: relative;
+    z-index: 100;
+    display: none;
+}
+
+.controls-visible {
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+    text-align: center;
+}
+
+.controls-visible label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 2px solid #fff;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.controls-visible label:nth-of-type(1) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.controls-visible label:nth-of-type(2) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.controls-visible label:nth-of-type(3) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.slide {
+    transform: translatex(0%);
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.slide {
+    transform: translatex(-100%);
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.slide {
+    transform: translatex(-200%);
+}
+
+
+/* Left/Right Button Classes Below */
+
+/* .navigator {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    display: none;
+}
+
+.navigator i {
+    font-size: 32px;
+    color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.navigator:nth-of-type(1) {
+    display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.navigator:nth-of-type(2) {
+    display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.navigator:nth-of-type(3) {
+    display: flex;
+} */

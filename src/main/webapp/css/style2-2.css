@@ -1,0 +1,113 @@
+/* 版面設定 */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 第一區header */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 22px;
+
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+}
+
+nav {
+    display: flex;
+    text-align: right;
+    margin-top: -90px;
+}
+
+nav ul {
+    list-style: none;
+
+}
+
+/* 會員照片 */
+#preview {
+    max-width: 50px;
+    max-height: 50px;
+    display: none;
+    float: right;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.option ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 第二區 */
+.container {
+    margin-top: 95px;
+}
+
+.pic {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+#space {
+    margin-top: 25px;
+}
+
+.postbutton {
+    margin-top: 70px;
+    width: 408px;
+    height: 50px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.productintro {
+    margin-top: 25px;
+}
+
+
+/* 第二區 */
+.btns {
+    border: 0;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 50px;
+}
+
+/* footer置底 */
+#body {
+    min-height: 100vh;
+}
+
+#footer {
+    position: sticky;
+    top: 100%;
+}
+/* #footer{ */
+/* 	position: fixed; */
+/* 	left: 0; */
+/* 	bottom: 0; */
+/* 	width: 100%; */
+/* } */

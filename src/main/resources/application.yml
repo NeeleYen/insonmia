@@ -1,0 +1,82 @@
+constants:
+  area:
+    - TW
+    - JP
+    - US
+  category:
+    - ART
+    - MUSIC
+    - TRAVEL
+    - GAME
+    - CRAFT
+#  cancelStatus:
+#    - 
+server:
+  port: 8888
+  servlet:
+    context-path: /my-insomnia
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    password: 123
+    url: jdbc:sqlserver://localhost:1433;databaseName=Insomnia;trustServerCertificate=true
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2016Dialect
+        format_sql: true
+    show-sql: true
+    
+  security:
+     oauth2:
+      client:
+        registration:
+         github:
+           clientId:  your-github-clientId
+           clientSecret:    your-github-clientSecret     
+         google: 
+           client-id: your-google-clientId
+           client-secret: your-google-clientSecret
+           scope:
+            - email
+            - profile
+      provider:
+        google:
+          user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+          authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+          token-uri: https://oauth2.googleapis.com/token
+          jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
+          user-name-attribute: sub
+
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    password: uwbosalsnearziew
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    username: your-Email
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+
+

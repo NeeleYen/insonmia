@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+body {
+  min-height: 100vh;
+}
+
+.footer {
+  position: sticky;
+  top: 100%;
+}
